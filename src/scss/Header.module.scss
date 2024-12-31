@@ -1,0 +1,7 @@
+@use 'variables';
+
+.abc{
+  text-align: center;
+  font-weight: bold;
+  color: variables.$darkBlue;
+}

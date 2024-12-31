@@ -1,0 +1,51 @@
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  width: 100%;  // Ensure full width
+}
+
+.picture {
+  display: grid;  // Switch to grid layout
+  grid-template-columns: repeat(4, 1fr);  // 4 equal-width columns
+  grid-gap: 20px;  // Adds space between items
+  width: 100%;  // Ensure picture takes full width of its container
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  padding-top: 100%;  // Maintain square aspect ratio
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.picture img {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;  // Ensure images fill their container
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.picture img:hover {
+  transform: scale(1.5);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.info {
+  text-align: center;
+  padding: 10px 15px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+}
